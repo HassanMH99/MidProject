@@ -1,0 +1,141 @@
+.program-form {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("https://2lazy4gym.files.wordpress.com/2012/05/upcoming.jpg?w=640");
+   
+    background-size: contain;
+    
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s;
+  }
+  
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .day-section {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    animation: slideInUp 0.5s;
+    background-color: #f9f9f9;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  }
+  
+  .day-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .exercise-section {
+    border: 1px solid #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    animation: slideInUp 0.5s;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  }
+  
+  .exercise-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .add-exercise-button,
+  .add-day-button,
+  .submit-button {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    animation: fadeIn 1s;
+  }
+  
+  .add-exercise-button:hover,
+  .add-day-button:hover,
+  .submit-button:hover {
+    background-color: #0062cc;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    
+  }
+  label{
+    font-weight: bold;
+    color: rgba(19, 11, 11, 0.882);
+  }
+  .back{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(50%,50%);
+    padding-left: 1rem;
+    animation-name: slideInLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+ 
+  }
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .back>button{
+    transition: background-color 0.3s ease-out;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  }
+  .back>button:hover{
+    background-color: #0062cc;
+  }
+  .back>button:active{
+    background-color: #005cbf;
+  }

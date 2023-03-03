@@ -1,35 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../Firebase/Firebase";
+import { useFetchPrograms } from "../hooks/useFirebase";
+import { Link } from "react-router-dom";
 import './ShowPrograms.css'
 export function ShowPrograms() {
-  const [programs, setPrograms] = useState([]);
-
-  useEffect(() => {
-    async function fetchPrograms() {
-      const programCollection = collection(db, "programs");
-      const programSnapshot = await getDocs(programCollection);
-      const programList = programSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setPrograms(programList);
-    }
-    fetchPrograms();
-  }, []);
+  const programs = useFetchPrograms();
 
   return (
     <div className="ShowProducts">
-      <nav className="ShowProducts-nav">
-        <h2>All Programs</h2>
-      </nav>
+      <h2>Programs</h2>
       <div className="ShowProducts-programList">
         {programs.map((program) => (
-          <div  className="ShowProducts-programList" key={program.id}>
+          <div  key={program.id} className="ShowProducts-programList">
             <h3>{program.name}</h3>
             <p>{program.description}</p>
-            <p>Difficulty level: {program.dificulty_level}</p>
-            <button className="ShowProducts-button">ShowDetails</button>
+            <p>{program.dificulty_level}</p>
+            <Link to={`/show-program/${program.id}`}>
+              <button className="ShowProducts-button">View Details</button>
+            </Link>
           </div>
         ))}
       </div>

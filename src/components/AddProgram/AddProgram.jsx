@@ -3,6 +3,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Firebase/Firebase";
 import "./AddProgram.css";
 import { Day } from "./Day";
+import { General } from "./General";
 export function AddProgram() {
   const [programName, setProgramName] = useState("");
   const [programDesc, setProgramDesc] = useState("");
@@ -64,17 +65,10 @@ export function AddProgram() {
     updatedDays[dayIndex].exercises[exerciseIndex].description = description;
     setDays(updatedDays);}
  
-const HandleBack =()=>{
-  window.location.href='/'
-}
+
   return (
     <div className="program-form">
-      <h2 className="form-title">Add Program</h2>
-      <div className="back">
-          <button onClick={HandleBack} type="submit" className="submit-button">
-            Back
-          </button>
-        </div>
+        <General/>
       <form onSubmit={handleAddProgram}>
         <label>
           Program Name

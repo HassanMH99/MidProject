@@ -5,6 +5,7 @@ import './ProgramDetails.css'
 export function ProgramDetails() {
   const  id  = useParams().id;
   const program = useFetchProgram(id);
+  console.log(program);
 
   if (!program) {
     return <div>Loading...</div>;

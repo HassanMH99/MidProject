@@ -1,5 +1,5 @@
 
-export function GeneralEdit({ editedProgram,handleDayNameChange,handleExerciseChange, handleInputChange, handleSaveChanges }) {
+export function GeneralEdit({ editedProgram, handleInputChange }) {
     return (
     <div className="program-details-container">
     <div className="program-details">

@@ -1,0 +1,31 @@
+.programs-container {
+    margin: 20px;
+  }
+  
+  .programs-header {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .programs-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .program-item {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .program-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .program-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  

@@ -4,7 +4,6 @@ import {db} from '../../Firebase/Firebase'
 //fetch one program
 export const useFetchProgram = (id) => {
     const [program, setProgram] = useState(null);
-  
     useEffect(() => {
       const fetchProgram = async () => {
         const programRef = doc(db, "programs", id);
@@ -20,6 +19,9 @@ export const useFetchProgram = (id) => {
   
     return program;
   };
+  export function filterProgramsByDifficulty(programs, difficulty) {
+    return programs.filter((program) => program.dificulty_level === difficulty);
+  }
 
   //Fetch all Programs
   export const useFetchPrograms = () => {
@@ -40,3 +42,18 @@ export const useFetchProgram = (id) => {
   
     return programs;
   };
+
+
+
+  export async function getProgramById(id) {
+    const programRef = doc(db, "programs", id);
+    const programSnapshot = await getDoc(programRef);
+    if (programSnapshot.exists()) {
+      return { id: programSnapshot.id, ...programSnapshot.data() };
+    } else {
+      console.log("No such program document!");
+      return null;
+    }
+  }
+
+

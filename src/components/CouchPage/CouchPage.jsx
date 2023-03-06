@@ -16,9 +16,13 @@ export function CouchPage(){
       const handleShowProgramClick = () => {
         window.location.href = '/show-program';
       };
+      const onclick=()=>{
+        window.location.href="/login"
+      }
 return <div className='CouchPage'>
     <nav className='CouchPage-nav'>
     <h1>Welcome to Couch Page</h1>
+    <button onClick={onclick}>Logout</button>
     </nav>
     <div className='CouchPage-div-buttons'>
     <button className='CouchPage-button' onClick={handleAddProgramClick}>Add Program</button>

@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { useFetchPrograms } from "../hooks/useFirebase";
-import { collection, getDocs } from "firebase/firestore";
 import { db,auth } from "../../Firebase/Firebase";
 import { Link } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {  onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 
 export function TrainerHome() {

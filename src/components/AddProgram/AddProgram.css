@@ -1,141 +1,156 @@
 .program-form {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: url("https://2lazy4gym.files.wordpress.com/2012/05/upcoming.jpg?w=640");
-   
-    background-size: contain;
-    
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.form-title {
+  font-size: 4rem;
+  text-align: center;
+  animation: fadeIn 1s;
+  color: #DAD9D4;
+  background-color: #AF5F30;
+  width: 100%;
+  margin: 0;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #DAD9D4;
+  color: #373A3A
   
-  .form-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    animation: fadeIn 1s;
-  }
+}
+.program-form form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day-section {
+  border: 2px solid #AF5F30;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 25%;
+  display: flex;
   
-  .form-input {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
+  flex-direction: column;
+  animation: slideInUp 0.5s;
+  background: linear-gradient(45deg, #AF5F30, #E89667, #F2C18E, #F9E6C9);
+}
+.day-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #373A3A
+}
+.day-title label{
+  color: #373A3A
+}
+
+.exercise-section {
+  border: 1px solid #373A3A;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  animation: slideInUp 0.5s;
+  background: linear-gradient(to bottom right, #AF5F30, #E5B797, #C8BBA3);
+
+}
+
+.exercise-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #292B2E;
+}
+
+.add-exercise-button,
+.add-day-button,
+.submit-button {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #AF5F30;
   
-  .day-section {
-    border: 2px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    animation: slideInUp 0.5s;
-    background-color: #f9f9f9;
-    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
-  }
-  
-  .day-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .exercise-section {
-    border: 1px solid #eee;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    animation: slideInUp 0.5s;
-    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
-  }
-  
-  .exercise-title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .add-exercise-button,
-  .add-day-button,
-  .submit-button {
-    display: block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    animation: fadeIn 1s;
-  }
-  
-  .add-exercise-button:hover,
-  .add-day-button:hover,
-  .submit-button:hover {
-    background-color: #0062cc;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInUp {
-    from {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .button-wrapper {
-    display: flex;
-    justify-content: center;
-    
-  }
-  label{
-    font-weight: bold;
-    color: rgba(19, 11, 11, 0.882);
-  }
-  .back{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    transform: translate(50%,50%);
-    padding-left: 1rem;
-    animation-name: slideInLeft;
+  color: #DAD9D4;
+  cursor: pointer;
+  animation: fadeIn 1s;
+}
+
+.add-exercise-button:hover,
+.add-day-button:hover,
+.submit-button:hover {
+  background: linear-gradient(to bottom right, #AF5F30, #E5B797, #C8BBA3);
+  color: #373A3A;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+  color: #DAD9D4;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  padding-left: 1rem;
+  animation-name: slideInLeft;
   animation-duration: 0.5s;
+  
   animation-timing-function: ease-out;
- 
-  }
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .back>button{
-    transition: background-color 0.3s ease-out;
-  background-color: #007bff;
-  color: #fff;
+}
+
+.back>button {
+  transition: background-color 0.3s ease-out;
+  background-color: #AF5F30;
+  color: #DAD9D4;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
+}
+
+.back>button:hover {
+  background-color: #292B2E;
+}
+
+.back>button:active {
+  background-color: #373A3A;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .back>button:hover{
-    background-color: #0062cc;
+  to {
+    opacity: 1;
   }
-  .back>button:active{
-    background-color: #005cbf;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY
+(20%);
+    opacity: 0;
   }
+}

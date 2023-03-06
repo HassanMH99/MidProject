@@ -1,64 +1,63 @@
 .program-details-container {
-    background-color: #1b1b1b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #373A3A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.program-details {
+  background-color: #DAD9D4;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+.program-details h2 {
+  margin-bottom: 10px;
+}
+
+.program-details p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.program-details .program-days {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.program-details .program-day {
+  display: flex;
+  flex-direction: column;
+  background-color: #C8BBA3;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.program-details .day-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.program-details .program-exercise {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #292B2E;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .program-details {
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    width: 600px;
+  to {
+    opacity: 1;
   }
-  
-  .program-details h2 {
-    margin-bottom: 10px;
-  }
-  
-  .program-details p {
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-  
-  .program-details .program-days {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-  }
-  
-  .program-details .program-day {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  .program-details .day-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .program-details .program-exercise {
-    margin-left: 20px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}

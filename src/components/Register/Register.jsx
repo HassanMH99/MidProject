@@ -41,35 +41,49 @@ export function Register() {
   };
 
   return (
-    <div className="login-form-container">
-      <form className="login-form" onSubmit={handleSignUp}>
+    <div className="Register-form-container">
+      <form className="Register-form" onSubmit={handleSignUp}>
+        <div className="Register-div">
+          <h2>Register</h2>
+        </div>
+        <label htmlFor="">Name</label>
         <input
-          className="login-input"
+          required
+          className="Register-input"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
+          placeholder="Enter your name"
         />
+        <label htmlFor="">Email</label>
         <input
-          className="login-input"
+          required
+          className="Register-input"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          placeholder="Enter your email"
         />
+        <label htmlFor="">Passowrd</label>
         <input
-          className="login-input"
+          required
+          className="Register-input"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
+          placeholder="Enter your password"
         />
-        <select value={userType} onChange={(e) => setUserType(e.target.value)}>
+        <select
+          required
+          className="Register-select"
+          value={userType}
+          onChange={(e) => setUserType(e.target.value)}
+        >
           <option value="">Select user type</option>
           <option value="coach">Coach</option>
           <option value="trainer">Trainer</option>
         </select>
-        <button className="login-button" type="submit">
+        <button className="Register-button" type="submit">
           Sign up
         </button>
         <div>

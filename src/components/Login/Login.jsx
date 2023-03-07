@@ -53,20 +53,26 @@ export function Login() {
     return (
       <div className="login-form-container">
         <form className="login-form" onSubmit={handleSignIn}>
-          <h2>Welcome back!</h2>
+          <div className="login-div">
+            <h2>Welcome To Workout Website</h2>
+          </div>
+          <label htmlFor="">Email</label>
           <input
+             required
             className="login-input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
+            placeholder="Enter your email"
           />
+          <label htmlFor="">Passowrd</label>
           <input
+          required
             className="login-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="Enter your password"
           />
           <button className="login-button" type="submit">
             Sign in

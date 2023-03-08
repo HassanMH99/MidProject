@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProgramById } from "../../hooks/useFirebase";
 import { DayProgram } from "./DayProgram";
-import "./intermediate.css";
+import "./ProgramDetailsinfo.css";
 
 export function IntermediateProgramDetails() {
   const { id } = useParams();
@@ -43,30 +43,37 @@ export function IntermediateProgramDetails() {
       return newCompletedExercises;
     });
   }
-
+  const OnBack =()=>{
+    window.history.back();
+  }
   return (
-    <div className="program-details-container">
-      <h2 className="program-details-header">{program.name}</h2>
-      <p className="program-details-description">{program.description}</p>
-      <div className="days-list">
-        {program.days.map((day, dayIndex) => {
-          const dayId = day.id;
-          const allExercisesCompleted =
-            completedExercises[dayId] &&
-            completedExercises[dayId][dayIndex] &&
-            completedExercises[dayId][dayIndex].length === day.exercises.length;
-          return (
-            <button
-              key={day.id}
-              className={`program-details-button ${
-                allExercisesCompleted ? "completed" : ""
-              }`}
-              onClick={() => setActiveDay(day)}
-            >
-              {`Day ${dayIndex + 1}`}
-            </button>
-          );
-        })}
+    <div className="Program-details-container">
+      <div className="Program-details-nav">
+        <h2 className="Program-details-header">{program.name}</h2>
+        <button onClick={OnBack} className="Program-details-button1">Back</button>
+      </div>
+      <div className="Program-details-buttons-description">
+        <p className="Program-details-description">{program.description}</p>
+        <div className="Days-list">
+          {program.days.map((day, dayIndex) => {
+            const dayId = day.id;
+            const allExercisesCompleted =
+              completedExercises[dayId] &&
+              completedExercises[dayId][dayIndex] &&
+              completedExercises[dayId][dayIndex].length === day.exercises.length;
+            return (
+              <button
+                key={day.id}
+                className={`Program-details-button ${
+                  allExercisesCompleted ? "completed" : ""
+                }`}
+                onClick={() => setActiveDay(day)}
+              >
+                {`Day ${dayIndex + 1}`}
+              </button>
+            );
+          })}
+        </div>
       </div>
       {activeDay && (
         <DayProgram

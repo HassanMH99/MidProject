@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./intermediate.css";
+import "./ProgramDetailsinfo.css";
 
 export function DayProgram({ day, dayIndex, onExerciseCompletion, completedExercises }) {
   const [completed, setCompleted] = useState(completedExercises);
@@ -14,16 +14,18 @@ export function DayProgram({ day, dayIndex, onExerciseCompletion, completedExerc
   };
 
   return (
-    <div className="day-program">
-      <h3 className="day-title">{`${day.dayName}`}</h3>
-      <div className="exercise-list">
+    <div className="Day-program">
+      <div className="Day-title-div">
+        <h3 className="Day-title">{`${day.dayName}`}</h3>
+      </div>
+      <div className="Exercise-list">
         {day.exercises.map((exercise, exerciseIndex) => (
-          <div key={exerciseIndex} className="exercise-item">
+          <div key={exerciseIndex} className="Exercise-item">
             <h1>{"Exercise" + " " + (exerciseIndex + 1)}</h1>
-            <h4 className="exercise-title">{exercise.name}</h4>
-            <p className="exercise-description">{exercise.description}</p>
+            <h4 className="Exercise-title">{exercise.name}</h4>
+            <p className="Exercise-description">{exercise.description}</p>
             <button
-              className={`exercise-button ${completed.includes(`${dayIndex}-${exerciseIndex}`) ? "completed" : ""}`}
+              className={`Exercise-button ${completed.includes(`${dayIndex}-${exerciseIndex}`) ? "completed" : ""}`}
               onClick={() => toggleExerciseCompletion(exerciseIndex)}
             >
               {completed.includes(`${dayIndex}-${exerciseIndex}`) ? "Completed" : "Mark as Done"}

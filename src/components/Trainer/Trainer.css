@@ -69,45 +69,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-items: start;
   justify-content: center;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   border-radius: 20em;
   
 }
 .TrainerHome-Description h3{
   max-inline-size: 60rem;
+  line-height: 150%;
   
 }
 
-.programs-container {
-    margin: 20px;
-  }
-  
-  .programs-header {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .programs-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .program-item {
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .program-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .program-description {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
+.TrainerHome-button{
+  background-color: #373A3A;
+  color: #DAD9D4;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 2px 2px #AF5F30;
+  width: 10%;
+  height: 5%;
+  text-align: center;
+  position: absolute;
+  right: 1em;
+  font-size: x-large;
+}
+.TrainerHome-button:hover {
+  background-color: #AF5F30;
+  color: #DAD9D4;
+  box-shadow: 4px 4px #373A3A;
+}

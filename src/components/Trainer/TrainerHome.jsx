@@ -24,11 +24,14 @@ export function TrainerHome() {
   //     }
   //   });
   // }, []);
-
+  const OnBack = ()=>{
+    window.location.href='/login'
+  }
   return (
     <div className="TrainerHome">
-      <div className="TrainerHome-nav">
+      <div onClick={OnBack} className="TrainerHome-nav">
         <h1>Welcome To My Website Workout </h1>
+        <button className="TrainerHome-button">Logout</button>
       </div >
       <div className="TrainerHome-h2">
         <h2>Check your Type To Start Your Program</h2>

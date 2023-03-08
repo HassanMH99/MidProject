@@ -30,6 +30,8 @@ function App() {
     {path:"/beginner-programs",element:<BeginnerProgram/>},
     {path:"/intermediate-programs",element:<IntermediateProgram/>},
     {path:"/intermediate-programs/:id",element:<IntermediateProgramDetails/>},
+    {path:"/Advanced-programs/:id",element:<IntermediateProgramDetails/>},
+    {path:"/beginner-programs/:id",element:<IntermediateProgramDetails/>},
     {path:"/Advanced-programs",element:<AdvancedProgram/>},
     
   ])

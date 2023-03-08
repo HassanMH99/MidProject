@@ -1,0 +1,137 @@
+.Program-Edit-container{
+    width: 100%;
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.Program-Edit-nav{
+    background-color:#AF5F30 ;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Program-Edit-nav h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.Program-Edit-button{
+    position: absolute;
+    top: 5%;
+    left: 1em;
+    width: 8%;
+    height: 5%;
+    background-color: #292B2E;
+    border: none;
+    border-radius: 5em;
+    color: #DAD9D4;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.Program-Edit-button:hover {
+    background: linear-gradient(to bottom right, #AF5F30, #E5B797, #C8BBA3);
+    color: #373A3A;
+  }
+
+  .Program-Edit{
+    background-color: #C8BBA3;
+    border-radius: 8em;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  .Program-Edit{
+    background-color: #C8BBA3;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .Program-Edit-container{
+    background-color: #292B2E;
+    border-radius: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+  .Program-Edit-Div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+   
+    
+  }
+  .Program-Edit-Input{
+    background-color:  #D69563;
+    width: 30%;
+    height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 20rem;
+  }
+  .Program-Edit-Label{
+    font-size: 2rem;
+  }
+  .Program-Edit-TextArea{
+    background-color: #D69563;
+    width: 30%;
+    height: 10%;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .Program-day-Edit{
+    background-color: #373A3A;
+    width: 90%;
+    padding-top: 1rem;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+    border-radius: 10rem;
+}
+.Program-days-Edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3em;
+    width: 100%;
+}
+.Program-Edit-exercise{
+    background-color: #6B6E6E   ;
+    border-radius:20rem ;
+    width: 70%;
+}
+.Edit-Button{
+    background-color: #AF5F30;
+    border: none;
+    width: 25%;
+    border-radius: 5em;
+    color: #DAD9D4;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+.Edit-Button:hover{
+background: linear-gradient(to bottom right, #AF5F30, #E5B797, #C8BBA3);
+  color: #373A3A;}

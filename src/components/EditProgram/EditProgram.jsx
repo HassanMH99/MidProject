@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 
 export function EditProgram() {
     const programs = useFetchPrograms();
-
+    const OnBack = ()=>{
+      window.location.href="/coach"
+    }
     return (
       <div className="ShowProducts">
-        <h2>Programs</h2>
+     <div className="ShowProducts-nav">
+        <h2>Edit Programs</h2>
+        <button onClick={OnBack} className="ShowProducts-button1">Back</button>
+      </div>
         <div className="ShowProducts-programList">
           {programs.map((program) => (
-            <div  key={program.id} className="ShowProducts-programList">
+            <div  key={program.id} className="ShowProducts-programList1">
               <h3>{program.name}</h3>
               <p>{program.description}</p>
               <p>{program.dificulty_level}</p>

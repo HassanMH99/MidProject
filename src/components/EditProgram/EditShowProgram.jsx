@@ -5,7 +5,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../Firebase/Firebase";
 import { GeneralEdit } from "./GeneralEdit";
 import { DayEdit } from "./DayEdit";
-
+import './EditProgramDetails.css'
 
 export function EditShowProgram() {
   const id = useParams().id;
@@ -65,12 +65,16 @@ export function EditShowProgram() {
   if (!program || !editedProgram) {
     return <div>Loading...</div>;
   }
-
+  const OnBack = ()=>{
+    window.history.back();
+  }
   return (
-    <div className="program-details-container">
-      <div className="program-details">
+    <div className="Program-Edit-container">
+      <div className="Program-Edit-nav"><h1>Edit Program</h1>
+      <button onClick={OnBack} className="Program-Edit-button">Back</button></div>
+      <div className="Program-Edit">
         <GeneralEdit editedProgram={editedProgram} handleInputChange={handleInputChange} />
-        <div className="program-days">
+        <div className="Program-days-Edit">
           {editedProgram.days.map((day, dayIndex) => (
             <DayEdit
               key={dayIndex}
@@ -81,7 +85,7 @@ export function EditShowProgram() {
             />
           ))}
         </div>
-        <button onClick={handleSaveChanges}>Save Changes</button>
+        <button className="Edit-Button" onClick={handleSaveChanges}>Save Changes</button>
       </div>
     </div>
   );

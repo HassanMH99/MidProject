@@ -5,23 +5,31 @@ export function ExerciseEdit({
   handleExerciseChange,
 }) {
   return (
-    <div key={exerciseIndex} className="program-exercise">
-      <p>
-        <input
-          type="text"
-          value={exercise.name}
-          onChange={(event) =>
-            handleExerciseChange(
-              dayIndex,
-              exerciseIndex,
-              event.target.value,
-              exercise.description
-            )
-          }
-        />
-      </p>
-      <p>
+    <div key={exerciseIndex} className="Program-Edit-exercise">
+        <div className="Program-Edit-Div">
+          <h1>{"Exersise"+" "+(exerciseIndex+1)}</h1>
+          <label htmlFor="">Name</label>
+          <input
+          style={{width:"40%"}}
+          className="Program-Edit-Input"
+            type="text"
+            value={exercise.name}
+            onChange={(event) =>
+              handleExerciseChange(
+                dayIndex,
+                exerciseIndex,
+                event.target.value,
+                exercise.description
+              )
+            }
+          />
+        </div>
+      
+      <div className="Program-Edit-Div">
+        <label htmlFor="">Description</label>
         <textarea
+         style={{width:"40"}}
+        className="Program-Edit-TextArea"
           value={exercise.description}
           onChange={(event) =>
             handleExerciseChange(
@@ -32,7 +40,7 @@ export function ExerciseEdit({
             )
           }
         />
-      </p>
+      </div>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export function ProgramDetails() {
               <div className='day-title'>{day.dayName}</div>
               {day.exercises.map((exercise, index) => (
                 <div key={index} className="program-exercise">
-                  <p>{"Exersice"+" "+(index+1)}</p>
+                  <p className='Exersice-background'>{"Exersice"+" "+(index+1)}</p>
                   <p>{exercise.name}</p>
                   <img src={exercise.image} alt="" />
                   <p>{exercise.description}</p>

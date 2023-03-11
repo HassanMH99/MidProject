@@ -94,13 +94,25 @@
 
 .program-exercise {
   padding: 0.5em;
-  background-color: #292b2e;
-  color: #dad9d4;
+  background-color: rgb(255, 255, 255);
+  color: #373a3a;
   border-radius: 30em;
   margin: 0.5em 0;
   width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
+.program-exercise p{
+  color: #292B2E;
+}
+.Exersice-background{
+  background-color: #c8bba3;
+  width: 50%;
+  margin-top: 1em;
+  
+  border-radius: 50em 50em 2em 2em;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

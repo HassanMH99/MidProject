@@ -98,17 +98,24 @@
   
 }
 .Exercise-item {
-  background-color: #c8bba3;
+  background-color: white;
   width: 60%;
-  border-radius: 20rem;
+  border-radius: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
  
 }
+.Exercise-item img{
+  width: 50%;
+  
+  /* border: 1px solid; */
+  
+}
 .Exercise-title{
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 0;
 }
 .Exercise-description{
     font-size: 1.3rem;
@@ -122,16 +129,15 @@
 }
 .Exercise-button {
     background-color: #af5f30;
-    width: 30%;
-    height: 3rem;
+    width: 40%;
+    height: 4rem;
     border-radius: 20rem;
     cursor: pointer;
     font-size: 1.5rem;
+    margin-bottom: 1em;
 }
 .Exercise-button.completed {
     background-color: #6B8E23;
     color: white;
     border: none;
   }
- 
-  

@@ -9,6 +9,7 @@ export function Day({ day, index, onDayNameChange, onExerciseChange, onAddExerci
           <input
             type="text"
             required
+
             className="form-input"
             value={day.dayName}
             onChange={(e) => onDayNameChange(index, e.target.value)}
@@ -20,11 +21,11 @@ export function Day({ day, index, onDayNameChange, onExerciseChange, onAddExerci
             key={exerciseIndex}
             exercise={exercise}
             index={exerciseIndex}
-            onDeleteExercise={(exerciseIndex, name, description) =>
-                onDeleteExercise(index, exerciseIndex, name, description)
+            onDeleteExercise={(exerciseIndex, name, description,image) =>
+                onDeleteExercise(index, exerciseIndex, name, description,image)
               }
-            onExerciseChange={(exerciseIndex, name, description) =>
-              onExerciseChange(index, exerciseIndex, name, description)
+            onExerciseChange={(exerciseIndex, name, description,image) =>
+              onExerciseChange(index, exerciseIndex, name, description,image)
             }
           />
         ))}

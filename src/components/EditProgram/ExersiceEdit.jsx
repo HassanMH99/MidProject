@@ -19,7 +19,8 @@ export function ExerciseEdit({
                 dayIndex,
                 exerciseIndex,
                 event.target.value,
-                exercise.description
+                exercise.description,
+                exercise.image
               )
             }
           />
@@ -36,7 +37,25 @@ export function ExerciseEdit({
               dayIndex,
               exerciseIndex,
               exercise.name,
-              event.target.value
+              event.target.value,
+              exercise.image
+            )
+          }
+        />
+      </div>
+      <div className="Program-Edit-Div">
+        <label htmlFor="">Image</label>
+        <textarea
+         style={{width:"40"}}
+        className="Program-Edit-TextArea"
+          value={exercise.image}
+          onChange={(event) =>
+            handleExerciseChange(
+              dayIndex,
+              exerciseIndex,
+              exercise.name,
+              exercise.description,
+              event.target.value,
             )
           }
         />

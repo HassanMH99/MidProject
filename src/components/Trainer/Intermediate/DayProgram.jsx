@@ -24,6 +24,7 @@ export function DayProgram({ day, dayIndex, onExerciseCompletion, completedExerc
             <h1>{"Exercise" + " " + (exerciseIndex + 1)}</h1>
             <h4 className="Exercise-title">{exercise.name}</h4>
             <p className="Exercise-description">{exercise.description}</p>
+            <img src={exercise.image} alt="" />
             <button
               className={`Exercise-button ${completed.includes(`${dayIndex}-${exerciseIndex}`) ? "completed" : ""}`}
               onClick={() => toggleExerciseCompletion(exerciseIndex)}

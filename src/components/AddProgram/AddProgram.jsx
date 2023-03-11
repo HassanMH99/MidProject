@@ -11,6 +11,7 @@ export function AddProgram() {
   const [days, setDays] = useState([{ dayName: "", exercises: [] }]);
 
   const handleAddProgram = async (e) => {
+   
     e.preventDefault();
     // add program to Firestore
     const docRef = await addDoc(collection(db, "programs"), {
@@ -18,8 +19,9 @@ export function AddProgram() {
       description: programDesc,
       dificulty_level: level,
       days: days,
+      
     });
-
+    console.log(programName, programDesc, level, days);
     console.log("Program added with ID: ", docRef.id);
     setProgramName("");
     setProgramDesc("");
@@ -52,20 +54,25 @@ export function AddProgram() {
      
     const updatedDays = [...days];
     if(updatedDays[index].exercises.length<10){
-    updatedDays[index].exercises.push({ name: "", description: "" });
+    updatedDays[index].exercises.push({ name: "", description: "",image:"" });
     setDays(updatedDays);
     }
   };
 
-  const handleExerciseChange = (dayIndex, exerciseIndex, name, description) => {
+  const handleExerciseChange = (dayIndex, exerciseIndex, name, description,image) => {
    
     const updatedDays = [...days];
 
     updatedDays[dayIndex].exercises[exerciseIndex].name = name;
     updatedDays[dayIndex].exercises[exerciseIndex].description = description;
-    setDays(updatedDays);}
+    if (image) {
+      updatedDays[dayIndex].exercises[exerciseIndex].image = image;
+    }
+      setDays(updatedDays);}
  
-
+    const OnBack = ()=>{
+      window.location.href="/coach"
+    }
   return (
     <div className="program-form">
         <General/>

@@ -1,7 +1,8 @@
 import React from "react";
 import './AddProgram.css'
 export function Exercise({ exercise, index, onExerciseChange,onDeleteExercise }) {
-    return (
+
+  return (
       <div className="exercise-section" key={index}>
         <h4 className="exercise-title">Exercise {index + 1}</h4>
         <label>
@@ -15,10 +16,12 @@ export function Exercise({ exercise, index, onExerciseChange,onDeleteExercise })
               onExerciseChange(
                 index,
                 e.target.value,
-                exercise.description
+                exercise.description,
+                exercise.image
               )
             }
           />
+          
         </label>
         <br />
         <label>
@@ -30,13 +33,32 @@ export function Exercise({ exercise, index, onExerciseChange,onDeleteExercise })
             onChange={(e) =>
               onExerciseChange(
                 index,
+                
                 exercise.name,
-                e.target.value
+                e.target.value,
+                exercise.image,
+                
               )
             }
           />
         </label>
         <br />
+        <label>
+          Exercise Image
+          <input
+            type="text"
+            className="form-input"
+            value={exercise.image}
+            onChange={(e) =>
+              onExerciseChange(
+                index,
+                exercise.name,
+                exercise.description,
+                e.target.value,
+              )
+            }
+          />
+        </label>
         <div className="button-wrapper">
         <button
           type="button"

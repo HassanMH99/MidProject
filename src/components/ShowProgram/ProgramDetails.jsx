@@ -31,6 +31,7 @@ export function ProgramDetails() {
                 <div key={index} className="program-exercise">
                   <p>{"Exersice"+" "+(index+1)}</p>
                   <p>{exercise.name}</p>
+                  <img src={exercise.image} alt="" />
                   <p>{exercise.description}</p>
                 </div>
               ))}

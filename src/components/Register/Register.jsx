@@ -83,14 +83,17 @@ export function Register() {
           <option value="coach">Coach</option>
           <option value="trainer">Trainer</option>
         </select>
-        <button className="Register-button" type="submit">
-          Sign up
-        </button>
-        <div>
-          <p>Already have an account?</p>
-          <Link className="register-button" to="/login">
-            Sign in
-          </Link>
+        <div className="button-flex">
+          <div>
+            <button className="Register-button" type="submit">
+              Sign up
+            </button>
+          </div>
+          <div >
+            <Link className="Register-button" to="/login">
+              Sign in
+            </Link>
+          </div>
         </div>
       </form>
     </div>

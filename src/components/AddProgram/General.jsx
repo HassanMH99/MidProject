@@ -7,7 +7,7 @@ export function General(){
     <>
      <h2 className="form-title">Add Program</h2>
       <div className="back">
-          <button onClick={OnBack} type="submit" className="submit-button">
+          <button onClick={OnBack} type="submit">
             Back
           </button>
         </div></>

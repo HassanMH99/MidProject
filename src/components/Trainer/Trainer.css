@@ -63,21 +63,26 @@
   color: #C8BBA3;
 }
 .TrainerHome-Description{
-  width: 70%;
-  height: 40%;
+  width: 80%;
+  height: 50%;
+  padding-top: 3em;
   background-color:#AF5F30;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: start;
-  justify-content: center;
-  font-size: 1.2em;
+  justify-items: center;
+  justify-content: start;
+  gap: 2em;
+  font-size: 1em;
   font-weight: bold;
   border-radius: 20em;
   
 }
+.TrainerHome-Description h2{
+  margin: 0;
+}
 .TrainerHome-Description h3{
-  max-inline-size: 60rem;
+  max-inline-size: 70rem;
   line-height: 150%;
   
 }
